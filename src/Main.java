@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        bienvenida();
+        int elec = bienvenida();
+        if (elec == 1) encriptar();
+        else if (elec == 2) desencriptar();
+        else System.out.println("Hasta la próxima");
     }
 
-    public static void bienvenida() {
+    public static int bienvenida() {
         boolean ok = false;
         String eleccion;
         System.out.println("Bienvenido a Caesar cipher!");
@@ -20,6 +23,15 @@ public class Main {
                 System.out.println("Elige entre 0 para salir, 1 para encriptar y 2 para desencriptar");
             }
         } while (!ok);
+        int a = Integer.parseInt(eleccion);
+        return a;
+    }
+
+    public static void encriptar(){
 
     }
+    public static void desencriptar(){
+
+    }
+
 }
